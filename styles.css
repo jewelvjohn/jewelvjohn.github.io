@@ -1,4 +1,54 @@
-.placeholder 
+body
 {
-    background-color: red;
+    margin: 0px;
+}
+
+.nav-wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+    background-color: rgb(60, 61, 68);
+}
+
+.left-side
+{
+    display: flex;
+}
+
+.brand
+{
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+.nav-wrapper > .left-side > div
+{
+    margin-right: 16px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper 
+{
+    height: 24px;
+    border-bottom: 4px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a 
+{
+    color: rgb(172, 180, 188);
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover 
+{
+    border-bottom: 4px solid white;
+} 
+
+.nav-link-wrapper a:hover 
+{
+    color: white;
 }
