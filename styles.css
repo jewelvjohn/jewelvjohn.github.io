@@ -32,14 +32,14 @@ body
 
 .nav-wrapper > .left-side > div
 {
-    margin-right: 16px;
-    font-size: 0.9em;
+    margin-right: 10px;
+    font-size: 0.8em;
     text-transform: uppercase;
 }
 
 .nav-link-wrapper 
 {
-    height: 24px;
+    height: 28px;
     border-bottom: 4px solid transparent;
     transition: border-bottom 0.5s;
 }
@@ -47,7 +47,7 @@ body
 .nav-link-wrapper a 
 {
     text-decoration: none;
-    padding: 6px 15px;
+    padding: 5px 16px;
     color: white;
     border-radius: 20px;
     transition: color 0.5s;
