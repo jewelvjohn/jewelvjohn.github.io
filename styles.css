@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+    font-family: 'Poppins', sans-serif;
+}
+
 body
 {
+    min-height: 100vh;
+    background: linear-gradient(rgb(17, 5, 39), rgb(41, 81, 166));
     margin: 0px;
 }
 
@@ -7,8 +15,7 @@ body
 {
     display: flex;
     justify-content: space-between;
-    padding: 32px;
-    background-color: rgb(60, 61, 68);
+    padding: 28px;
 }
 
 .left-side
@@ -20,6 +27,7 @@ body
 {
     color: aliceblue;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 .nav-wrapper > .left-side > div
@@ -38,17 +46,16 @@ body
 
 .nav-link-wrapper a 
 {
-    color: rgb(172, 180, 188);
     text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
     transition: color 0.5s;
 }
 
-.nav-link-wrapper:hover 
+.nav-link-wrapper a:hover ,
+.nav-link-wrapper a.active
 {
-    border-bottom: 4px solid white;
-} 
-
-.nav-link-wrapper a:hover 
-{
-    color: white;
+    background: white;
+    color: black;
 }
