@@ -24,6 +24,7 @@ header
     align-items: center;
     justify-content: space-between;
     padding: 0 100px;
+    background: rgb(17, 5, 39);
 }
 
 .logo
@@ -99,7 +100,7 @@ header
         left: 0;
         right: 0;
         width: 100vw;
-        background: linear-gradient(rgb(50, 24, 168), rgb(41, 81, 166));
+        background: rgb(17, 5, 39);
         transition: 0.2s;
         overflow: hidden;
     }

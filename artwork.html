@@ -1,37 +1,46 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset = "utf-8" />
-        <title>Artwork</title>
-        <link rel="stylesheet" href="styles.css"> 
-    </head>
-    <body>
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="left-side">
-                    <div class="nav-link-wrapper"> 
-                        <a href="index.html">Home</a>
-                    </div>
-
-                    <div class="nav-link-wrapper"> 
-                        <a href="artwork.html"  class="active">Artwork</a>
-                    </div>
-
-                    <div class="nav-link-wrapper"> 
-                        <a href="projects.html">Projects</a>
-                    </div>
-
-                    <div class="nav-link-wrapper"> 
-                        <a href="about.html">About</a>
-                    </div>
-                </div>
-                
-                <div class="right-side">
-                    <div class="brand">
-                        <div>Jewel John</div>
-                    </div>
-                </div>
-            </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artworks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Jewel John
         </div>
-    </body>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="artwork.html" class="active">Artworks</a>
+                </li>
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function() 
+        {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+    </script>
+</body>
 </html>
