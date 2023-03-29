@@ -21,6 +21,14 @@ body
     margin: 0px;
 }
 
+#sec-1
+{
+    background: url(Sprites/Water_Top.png), url(Sprites/Water_Rays.png), url(Sprites/Water_Background.png);
+    background-blend-mode: normal, hard-light, normal;
+    background-position: top;
+    background-size: 100vh;
+}
+
 section
 {
     min-height: 100vh;
@@ -202,7 +210,6 @@ header
     content: "";
     position: absolute;
     background: aqua;
-    z-index: -1;
     top: 0;
     bottom: 0;
     left: 0;
@@ -210,6 +217,7 @@ header
     box-shadow: 0 0 2em 0.5em aqua;
     opacity: 0;
     transition: opacity 100ms linear;
+    z-index: -1;
 }
 
 .explore-btn:hover,
