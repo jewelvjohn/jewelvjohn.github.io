@@ -261,7 +261,7 @@ header
 .img-gallery img:hover
 {
     transform: scale(0.8) rotate(-15deg);
-    border-radius: 20px;
+    border-radius: 40px;
     box-shadow: 0 32px 75px rgba(0, 0, 0, 0.5);
 }
 
@@ -293,4 +293,16 @@ header
     font-size: 30px;
     color: #fff;
     cursor: pointer;
+}
+
+.full-img-close img
+{
+    max-width: 35px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.full-img-close img:hover
+{
+    transform: scale(1.35) rotate(90deg);
 }
