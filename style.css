@@ -318,9 +318,8 @@ header
 
 .about-page 
 {
-    border: rgba(17, 5, 39, 0.5) solid 10px;
+    border: rgba(255, 255, 255, 0.5) solid 10px;
     margin: 50px 50px;
-    height: 70vh;
     border-radius: 40px;
     display: flex;
     align-items: center;
@@ -350,7 +349,13 @@ header
     margin-bottom: 20px;
 }
 
-.about-text button
+.about-button 
+{
+    display: flex;
+    position: relative;
+}
+
+.about-button button
 {
     display: flex;
     position: relative;
@@ -360,12 +365,20 @@ header
     justify-content: center;
     margin: 10px 10px;
     background: transparent;
-    border-width: 5px;
-    border-radius: 25%;
+    border: transparent;
+    border-radius: 20%;
+    transition: 0.2s;
 }
 
-.about-text button img
+.about-button button:active
+{
+    background: rgba(6, 5, 42, 0.75);
+}
+
+.about-button img
 {
     height: 100%;
     width: 100%;
+    padding: 3px 3px;
+    border-radius: 0%;
 }
