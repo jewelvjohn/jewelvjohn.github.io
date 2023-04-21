@@ -53,6 +53,15 @@ header
     font-weight: 600;
     color: white;
     text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.logo img
+{
+    height: 30px;
+    position: relative;
+    margin-right: 10px;
+    transform: translateY(7.5px);
 }
 
 .hamburger
@@ -305,4 +314,58 @@ header
 .full-img-close img:hover
 {
     transform: scale(1.35) rotate(90deg);
+}
+
+.about-page 
+{
+    border: rgba(17, 5, 39, 0.5) solid 10px;
+    margin: 50px 50px;
+    height: 70vh;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-page img
+{
+    height: auto;
+    width: 40vh;
+    border-radius: 40px;
+    margin: 20px 20px;
+}
+
+.about-text h1
+{
+    margin-bottom: 20px;
+}
+
+.about-text h4
+{
+    margin-bottom: 10px;
+}
+
+.about-text p
+{
+    margin-bottom: 20px;
+}
+
+.about-text button
+{
+    display: flex;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px;
+    background: transparent;
+    border-width: 5px;
+    border-radius: 25%;
+}
+
+.about-text button img
+{
+    height: 100%;
+    width: 100%;
 }
