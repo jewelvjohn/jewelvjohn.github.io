@@ -42,9 +42,11 @@ header
     height: 80px;
     display: flex;
     align-items: center;
+    position: relative;
     justify-content: space-between;
     padding: 0 100px;
     background: rgb(17, 5, 39);
+    z-index: 10;
 }
 
 .logo
@@ -123,13 +125,13 @@ header
 
     .nav-bar
     {
+        background: linear-gradient(rgba(17, 5, 39, 1), rgba(17, 5, 39, 0.5));
         height: 0px;
         position: absolute;
         top: 80px;
         left: 0;
         right: 0;
         width: 100vw;
-        background: rgb(17, 5, 39);
         transition: 0.2s;
         overflow: hidden;
     }
@@ -381,4 +383,70 @@ header
     width: 100%;
     padding: 3px 3px;
     border-radius: 0%;
+}
+
+.project-widget
+{
+    border: rgba(255, 255, 255, 0.25) solid 5px;
+    margin: 50px 50px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.project-widget img
+{
+    height: auto;
+    width: 20vh;
+    border-radius: 40px;
+    margin: 20px 20px;
+}
+
+.project-widget h2
+{
+    margin-bottom: 10px;
+}
+
+.project-widget p
+{
+    margin: 10px 0px;
+}
+
+.project-widget a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.project-widget a:before,
+a:after {
+    position: absolute;
+    content: "";
+    border-bottom: 4px solid rgba(255, 255, 255, 1);
+    border-radius: 1em;
+    bottom: 0.3em;
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.project-widget a:before {
+    width: 3em;
+    transform-origin: left;
+}
+
+.project-widget a:after {
+    width: 82%;
+    left: 1.5em;
+    transform: translateX(110%);
+}
+
+.project-widget a:hover:before {
+    transform: scaleX(0.3);
+}
+
+.project-widget a:hover:after {
+    transform: translateX(0);
 }
