@@ -99,68 +99,6 @@ header
     background: white;
 }
 
-@media only screen and (max-width: 1000px)
-{
-    header
-    {
-        padding: 0 30px;
-    }
-}
-
-@media only screen and (max-width: 800px)
-{
-    .hamburger
-    {
-        display: block;
-        cursor: pointer;
-    }
-
-    .hamburger .line
-    {
-        width: 30px;
-        height: 3px;
-        background-color: white;
-        margin: 6px 0;
-    }
-
-    .nav-bar
-    {
-        background: linear-gradient(rgba(17, 5, 39, 1), rgba(17, 5, 39, 0.5));
-        height: 0px;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        width: 100vw;
-        transition: 0.2s;
-        overflow: hidden;
-    }
-
-    .nav-bar.active
-    {
-        height: 300px;
-    }
-
-    .nav-bar ul
-    {
-        display: block;
-        width: fit-content;
-        margin: 40px auto 0 auto;
-        text-align: center;
-        transition: 0.5s;
-        opacity: 0;
-    }
-
-    .nav-bar.active ul 
-    {
-        opacity: 1;
-    }
-
-    .nav-bar ul li a
-    {
-        margin-bottom: 12px;
-    }
-}
 
 .content 
 {
@@ -339,16 +277,20 @@ header
 .about-text h1
 {
     margin-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
 }
 
 .about-text h4
 {
     margin-bottom: 10px;
+    padding-right: 20px;
 }
 
 .about-text p
 {
     margin-bottom: 20px;
+    padding-right: 20px;
 }
 
 .about-button 
@@ -449,4 +391,104 @@ a:after {
 
 .project-widget a:hover:after {
     transform: translateX(0);
+}
+
+@media only screen and (max-width: 1000px)
+{
+    header
+    {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 800px)
+{
+    .hamburger
+    {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line
+    {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+    }
+
+    .nav-bar
+    {
+        background: linear-gradient(rgba(17, 5, 39, 1), rgba(17, 5, 39, 0.5));
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+
+    .nav-bar.active
+    {
+        height: 300px;
+    }
+
+    .nav-bar ul
+    {
+        display: block;
+        width: fit-content;
+        margin: 40px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav-bar.active ul 
+    {
+        opacity: 1;
+    }
+
+    .nav-bar ul li a
+    {
+        margin-bottom: 12px;
+    }
+
+    .about-page img
+    {
+        height: auto;
+        width: 40%;
+    }
+
+    .about-button button
+    {
+        display: flex;
+        position: relative;
+        height: 30px;
+        width: 30px;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 10px;
+        background: transparent;
+        border: transparent;
+        border-radius: 20%;
+        transition: 0.2s;
+    }
+
+    .about-button img
+    {
+        height: 100%;
+        width: 100%;
+        padding: 3px 3px;
+        border-radius: 0%;
+    }
+
+    .project-widget img
+    {
+        height: auto;
+        width: 10vh;
+        border-radius: 40px;
+        margin: 20px 20px;
+    }
 }
