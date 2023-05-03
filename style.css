@@ -329,7 +329,7 @@ header
 
 .project-widget
 {
-    border: rgba(255, 255, 255, 0.25) solid 5px;
+    border: rgba(255, 255, 255, 0.25) solid 10px;
     margin: 50px 50px;
     border-radius: 40px;
     display: flex;
@@ -490,5 +490,25 @@ a:after {
         width: 10vh;
         border-radius: 40px;
         margin: 20px 20px;
+    }
+
+    .project-widget
+    {
+        border: rgba(255, 255, 255, 0.25) solid 5px;
+        margin: 30px 30px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .about-page 
+    {
+        border: rgba(255, 255, 255, 0.5) solid 5px;
+        margin: 30px 30px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
 }
