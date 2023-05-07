@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    color: white;
+    min-height: 100vh;
+    background-size: 100%;
+    background-position-y: center;
+    background-color: black;
+    background-repeat: no-repeat;
+    margin: 0px;
+}
+
+section
+{
+    min-height: 100vh;
+    width: 100%;
+}
+
+header
+{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    padding: 0 100px;
+    background: rgb(17, 5, 39);
+    z-index: 10;
+}
+
+.logo
+{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.logo img
+{
+    height: 30px;
+    position: relative;
+    margin-right: 10px;
+    transform: translateY(7.5px);
+}
+
+.hamburger
+{
+    display: none;
+}
+
+.nav-bar ul
+{
+    display: flex;
+}
+
+.nav-bar ul li a
+{
+    display: block;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a:hover
+{
+    color: black;
+    background: white;
+}
+
+.nav-bar ul li a.active
+{
+    color: black;
+    background: white;
+}
+
+@media only screen and (max-width: 1000px)
+{
+    header
+    {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 800px)
+{
+    .hamburger
+    {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line
+    {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+    }
+
+    .nav-bar
+    {
+        background: linear-gradient(rgba(17, 5, 39, 1), rgba(17, 5, 39, 0.5));
+        height: 0px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+
+    .nav-bar.active
+    {
+        height: 300px;
+    }
+
+    .nav-bar ul
+    {
+        display: block;
+        width: fit-content;
+        margin: 40px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav-bar.active ul 
+    {
+        opacity: 1;
+    }
+
+    .nav-bar ul li a
+    {
+        margin-bottom: 12px;
+    }
+}
