@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+
+body 
+{
+    background: linear-gradient(to bottom, #141438, #3c57a5);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-attachment: fixed;
+
+    font-family: "Poppins", sans-serif;
+    color: white;
+
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container
+{
+    position: absolute;
+    overflow: hidden;
+
+    width: auto;
+    height: auto;
+
+    border: solid 2px white;
+    border-radius: 8px;
+
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+.menu-container
+{
+    position: relative;
+    transform: scale(0.8);
+
+    transition: all 0.2s ease-in-out;
+}
+
+.background
+{
+    position: absolute;
+}
+
+.background img
+{
+    height: auto;
+    width: 100vw;
+}
+
+.menu
+{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+
+    width: 400px;
+    height: auto;
+
+    transform: rotateX(0deg) rotateY(0deg) skew(16deg, -2deg) translateX(100px);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.menu button
+{
+    width: 400px;
+    height: 80px;
+
+    border-radius: 16px;
+    border: solid 2px white;
+
+    background-color: transparent;
+
+    font-family: "Poppins";
+    font-size: 32px;
+    color: white;
+    overflow: hidden;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.menu button:hover
+{
+    background-color: white;
+    color: black;
+
+    font-size: 60px;
+    
+    text-decoration: line-through;
+    text-decoration-thickness: 3px;
+
+    transform: scale(1.2);
+}
+
+/*
+@media (max-width: 768px) 
+{
+    .menu-container
+    {
+        transform: scale(0.6);
+    }
+}
+
+@media (max-width: 640px) 
+{
+    .menu-container 
+    {
+        transform: scale(0.4); 
+    }
+}
+*/

@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap');
+
+body{
+    background: linear-gradient(to bottom, #141438, #3c57a5);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-attachment: fixed;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    position: relative;
+    width: calc(100vw - 10px);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #141438;
+}
+::-webkit-scrollbar-thumb {
+    background: #1c3775;
+    transition: 0.2s;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #3c57a5;
+}
+
+/*Navigation Bar*/
+
+.nav-bar{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgba(0,0,0,0) 20%, rgba(112, 76, 255, 0.25));
+    border-radius: 25px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    height: 50px;
+    z-index: 1;
+}
+
+.brand-container{
+    height: 40px;
+    width: fit-content;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+}
+
+.brand-container img{
+    width: 50px;
+    height: 50px;
+}
+
+.brand{
+    padding: 6px;
+}
+
+.brand a{
+    text-decoration: none;
+}
+
+.nav-buttons{
+    padding: 6px;
+    display: flex;
+    gap: 6px;
+}
+
+.button a{
+    text-decoration: none;
+}
+
+.button-container{
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-out;
+}
+
+.button-container img{
+    width: 40px;
+    height: 40px;
+}
+
+.button-container:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 110px;
+}
+
+/*Navigation Bar*/
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 80px 20px 0px 20px;
+}
+
+.gallery .header h3{
+    font-size: 2.5em;
+    font-weight: bolder;
+    border-bottom: 3px solid white;
+}
+
+.gallery .header h3 span{
+    font-weight: 100;
+}
+
+.gallery-box{
+    width: 92%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: top;
+    margin-bottom: 40px;
+}
+
+.gallery-box .dream{
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+
+.gallery-box .dream img{
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    transition: 0.25s all ease-in-out;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.25);
+}
+
+.gallery-box .dream img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 680px){
+    .gallery-box{
+        flex-direction: column;
+        width: 72%;
+    }
+
+    .gallery-box .dream{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 980px){
+    .gallery-box{
+        width: 72%;
+    }
+}
