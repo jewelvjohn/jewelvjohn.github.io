@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artworks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Sprites/Logo.png">
+            Jewel John
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="artwork.html" class="active">Artworks</a>
+                </li>
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="full-img" id="fullImgBox">
+        <img src="Artworks/Agel.png" id="fullImg">
+        <span onclick="closeFullImg()">
+            <div class="full-img-close">
+                <img src="Sprites/Close.png">
+            </div>
+        </span>
+    </div>
+    <div class="content">
+        <p>
+            These are the artwork! 😁
+        </p>
+    </div>
+    <div class = "img-gallery">
+        <img src="Artworks/Agel.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/Alone.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/Ashutti.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/Colours Of India.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/Demn.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/IP Girl.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/jewell0v3-28052022-0001.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/jewell0v3-28052022-0002.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/jewell0v3-28052022-0003.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/jewell0v3-28052022-0005.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/jewell0v3-28052022-0006.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/jewell0v3-28052022-0007.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/Kalaash-22.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/Lil Jewel.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/Profile.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/Silhouette.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/Soorya.jpg" onclick="openFullImg(this.src)">
+        <img src="Artworks/Tower.jpg" onclick="openFullImg(this.src)">
+    </div>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function() 
+        {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(picture) 
+        {
+            fullImgBox.style.display = "flex";
+            fullImg.src = picture;
+        }
+
+        function closeFullImg() 
+        {
+            fullImgBox.style.display = "none";
+        }
+    </script>
+</body>
+</html>
