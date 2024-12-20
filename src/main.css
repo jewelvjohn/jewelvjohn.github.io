@@ -55,6 +55,13 @@ body {
     gap: 16px;
 }
 
+#resume-section {
+    display: none;
+}
+#expertise-section {
+    display: none;
+}
+
 .menu-container {
     z-index: 4;
     display: flex;
@@ -94,6 +101,21 @@ body {
     text-decoration-thickness: 3px;
     transform: scale(1.2);
     box-shadow: 0 0 12px 4px #9ED8DB;
+}
+
+.back-button lottie-player{
+    width: clamp(56px, 10vw, 72px);
+    height: clamp(56px, 10vw, 72px);
+    border-radius: 16px;
+    border: solid 2px #D64045;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.back-button lottie-player:hover {
+    background-color: #D64045;
+    transform: scale(1.2);
+    box-shadow: 0 0 12px 4px #D64045;
 }
 
 .socials-container {

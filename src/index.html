@@ -11,41 +11,59 @@
         <div class="background">
             <img src="./resources/images/billboard.png" alt="">
         </div>
-        <div class="container">
-            <div class="menu-container">
-                <span class="menu-header">PROFESSIONAL</span>
-                <div class="menu-button">
-                    <button>Resume</button>
-                </div>
-                <div class="menu-button">
-                    <button>Expertise</button>
-                </div>
-                <div class="menu-button">
-                    <a href="https://jewelvjohn.github.io/stride/" target="_blank"> <button>Portfolio#2</button> </a>
-                </div>
-                <span class="menu-header">PROJECTS</span>
-                <div class="menu-button"> 
-                    <a href="https://jewelvjohn.github.io/burny-rush/" target="_blank"> <button>BurnyRush</button> </a>
-                </div>
-                <div class="menu-button"> 
-                    <a href="https://jewelvjohn.github.io/stratosphere/" target="_blank"> <button>Stratosphere</button> </a>
-                </div>
-            </div>
-            <div class="socials-container">
-                <a href="https://www.linkedin.com/in/jewelvjohn/" target="_blank">
-                    <lottie-player loop hover src="./resources/animations/linkedin.json"></lottie-player>
-                </a> 
-                <a href="https://github.com/jewelvjohn" target="_blank">
-                    <lottie-player loop hover src="./resources/animations/github.json"></lottie-player>
-                </a> 
-                <a href="https://www.instagram.com/jewelvjohn/" target="_blank">
-                    <lottie-player id="instagram" src="./resources/animations/instagram.json"></lottie-player>
-                </a> 
-                <a href="https://dribbble.com/jeweljohn" target="_blank">
-                    <lottie-player loop hover src="./resources/animations/dribbble.json"></lottie-player>
-                </a> 
-            </div>
-        </div>
         <script type="module" src="/main.js"></script>
     </body>
+    <div id="main-section" class="container">
+        <div class="menu-container">
+            <span class="menu-header">PROFESSIONAL</span>
+            <div class="menu-button">
+                <button id="resume-button">Resume</button>
+            </div>
+            <div class="menu-button">
+                <button id="expertise-button">Expertise</button>
+            </div>
+            <div class="menu-button">
+                <a href="https://jewelvjohn.github.io/stride/" target="_blank"> <button>Portfolio#2</button> </a>
+            </div>
+            <span class="menu-header">PROJECTS</span>
+            <div class="menu-button"> 
+                <a href="https://jewelvjohn.github.io/burny-rush/" target="_blank"> <button>BurnyRush</button> </a>
+            </div>
+            <div class="menu-button"> 
+                <a href="https://jewelvjohn.github.io/stratosphere/" target="_blank"> <button>Stratosphere</button> </a>
+            </div>
+        </div>
+        <div class="socials-container">
+            <a href="https://www.linkedin.com/in/jewelvjohn/" target="_blank">
+                <lottie-player loop hover src="./resources/animations/linkedin.json"></lottie-player>
+            </a> 
+            <a href="https://github.com/jewelvjohn" target="_blank">
+                <lottie-player loop hover src="./resources/animations/github.json"></lottie-player>
+            </a> 
+            <a href="https://www.instagram.com/jewelvjohn/" target="_blank">
+                <lottie-player id="instagram" src="./resources/animations/instagram.json"></lottie-player>
+            </a> 
+            <a href="https://dribbble.com/jeweljohn" target="_blank">
+                <lottie-player loop hover src="./resources/animations/dribbble.json"></lottie-player>
+            </a> 
+        </div>
+    </div>
+    <div id="resume-section" class="container">
+        <div class="back-button">
+            <lottie-player loop hover src="./resources/animations/back.json"></lottie-player>
+        </div>
+        <div class="menu-container">
+            <span class="menu-header">RESUME</span>
+            <span class="menu-header">SECTION</span>
+        </div>
+    </div>
+    <div id="expertise-section" class="container">
+        <div class="back-button">
+            <lottie-player loop hover src="./resources/animations/back.json"></lottie-player>
+        </div>
+        <div class="menu-container">
+            <span class="menu-header">EXPERTISE</span>
+            <span class="menu-header">SECTION</span>
+        </div>
+    </div>
 </html>
