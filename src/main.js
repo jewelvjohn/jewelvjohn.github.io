@@ -58,7 +58,7 @@ function gotoExpertise() {
     }
 }
 
-function init() {
+function initializeLottie() {
     const instagram = document.getElementById("instagram");
     instagram.onload = (e) => {
         create({
@@ -67,19 +67,75 @@ function init() {
             actions: [{type: "hold"}]
         });
     }
+    
+    const download = document.getElementById("download");
+    download.onload = (e) => {
+        create({
+            player:'#download',
+            mode:"cursor",
+            actions: [
+                {
+                    type: "click",
+                    forceFlag: false
+                }
+            ]
+        });
+    }
+}
 
-    backButtons = document.querySelectorAll(".back-button");
-    resumeButton = document.querySelector("#resume-button");
-    expertiseButton = document.querySelector("#expertise-button");
+function initializeSections() {
     mainSection = document.querySelector("#main-section");
     resumeSection = document.querySelector("#resume-section");
     expertiseSection = document.querySelector("#expertise-section");
+}
 
+function initializeButtons() {
+    backButtons = document.querySelectorAll(".back-button");
+    resumeButton = document.querySelector("#resume-button");
+    expertiseButton = document.querySelector("#expertise-button");
+    
     resumeButton.onclick = gotoResume;
     expertiseButton.onclick = gotoExpertise;
     backButtons.forEach((button) => {
         button.onclick = gotoMain;
+        const animation = button.querySelector("lottie-player");
+        const playAnimation = () => {
+            animation.play();
+        };
+        const pauseAnimation = () => {
+            animation.stop();
+        };
+        animation.addEventListener("mouseenter", playAnimation);
+        animation.addEventListener("mouseleave", pauseAnimation);
     });
+}
+
+function initializePDF() {
+    let pdfCanvas = document.querySelector("#pdf-canvas");
+    const context = pdfCanvas.getContext("2d");
+    
+    pdfjsLib.getDocument("./resources/docs/Jewel John Resume 24-09-24.pdf").promise.then(pdfDoc => {
+        pdfDoc.getPage(1).then(page => {
+            let pageViewport = page.getViewport({scale: 1});
+            pdfCanvas.width = pageViewport.width;
+            pdfCanvas.height = pageViewport.height;
+            page.render({
+                canvasContext: context,
+                viewport: pageViewport
+            });
+        }).catch(pageErr => {
+            console.log(pageErr);
+        });
+    }).catch(pdfErr => {
+        console.log(pdfErr);
+    });
+}
+
+function init() {
+    initializeLottie();
+    initializeSections()
+    initializeButtons();
+    initializePDF();
 }
 
 init();

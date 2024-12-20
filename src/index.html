@@ -11,6 +11,7 @@
         <div class="background">
             <img src="./resources/images/billboard.png" alt="">
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.16.105/build/pdf.min.js"></script>
         <script type="module" src="/main.js"></script>
     </body>
     <div id="main-section" class="container">
@@ -49,21 +50,27 @@
         </div>
     </div>
     <div id="resume-section" class="container">
-        <div class="back-button">
-            <lottie-player loop hover src="./resources/animations/back.json"></lottie-player>
+        <div class="button-container">
+            <div class="back-button">
+                <lottie-player id="lottie" loop src="./resources/animations/back.json"></lottie-player>
+            </div>
+            <a id="download-button" href="./resources/docs/Jewel John Resume 24-09-24.pdf" download>
+                <lottie-player id="download" src="./resources/animations/download.json"></lottie-player>
+            </a>
         </div>
         <div class="menu-container">
             <span class="menu-header">RESUME</span>
-            <span class="menu-header">SECTION</span>
+            <div id="pdf-container">
+                <canvas id="pdf-canvas"></canvas>
+            </div>
         </div>
     </div>
     <div id="expertise-section" class="container">
         <div class="back-button">
-            <lottie-player loop hover src="./resources/animations/back.json"></lottie-player>
+            <lottie-player loop src="./resources/animations/back.json"></lottie-player>
         </div>
         <div class="menu-container">
             <span class="menu-header">EXPERTISE</span>
-            <span class="menu-header">SECTION</span>
         </div>
     </div>
 </html>

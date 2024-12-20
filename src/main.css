@@ -10,6 +10,7 @@
     color-scheme: dark;
     color: #E9FFF9;
     font-synthesis: none;
+    background: linear-gradient(180deg, #182b48, #588db5);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -28,7 +29,6 @@ body {
     position: relative;
     flex-direction: column;
     overflow: hidden;
-    background: linear-gradient(180deg, #182b48, #588db5);
 }
 
 .background {
@@ -65,6 +65,7 @@ body {
 .menu-container {
     z-index: 4;
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -101,6 +102,12 @@ body {
     text-decoration-thickness: 3px;
     transform: scale(1.2);
     box-shadow: 0 0 12px 4px #9ED8DB;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .back-button lottie-player{
@@ -140,4 +147,32 @@ body {
     background-color: #D64045;
     transform: scale(1.2);
     box-shadow: 0 0 12px 4px #D64045;
+}
+
+#download-button lottie-player {
+    width: clamp(56px, 10vw, 72px);
+    height: clamp(56px, 10vw, 72px);
+    border-radius: 16px;
+    border: solid 2px #D64045;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+#download-button lottie-player:hover {
+    background-color: #D64045;
+    transform: scale(1.2);
+    box-shadow: 0 0 12px 4px #D64045;
+}
+
+#pdf-container {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    width: clamp(200px, 40vw, 300px);
+    height: clamp(300px, 60vw, 400px);
+    overflow: hidden;
+}
+
+#pdf-canvas {
+    width: 100%;
 }
