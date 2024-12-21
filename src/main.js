@@ -6,7 +6,7 @@ let mainSection, resumeSection, expertiseSection;
 
 var currentSection = 0;
 
-function transition(from, to) {
+function transition(from, to, flex = true) {
     const fadeOut = from.animate([
         {
             opacity: 1
@@ -21,7 +21,7 @@ function transition(from, to) {
 
     fadeOut.addEventListener("finish", () => {
         from.style.display = 'none';
-        to.style.display = 'flex';
+        to.style.display = flex ? 'flex' : 'block';
         const fadeIn = to.animate([
             {
                 opacity: 0
@@ -38,8 +38,8 @@ function transition(from, to) {
 
 function gotoMain() {
     if(currentSection !== 0) {
-        if(currentSection === 1) transition(resumeSection, mainSection);
-        else if(currentSection === 2) transition(expertiseSection, mainSection);
+        if(currentSection === 1) transition(resumeSection, mainSection, false);
+        else if(currentSection === 2) transition(expertiseSection, mainSection, false);
         currentSection = 0;
     }
 }

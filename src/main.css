@@ -31,6 +31,36 @@ body {
     overflow: hidden;
 }
 
+.highlight {
+    font-weight: 600;
+}
+
+.introduction {
+    display: flex;
+    padding: 18px;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.introduction h2 {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: clamp(18px, 3.4vw, 26px);
+
+}
+
+.introduction p {
+    font-family: 'Montserrat';
+    font-size: clamp(14px, 3vw, 22px);
+}
+
+.introduction img {
+    border-radius: 50%;
+    width: clamp(130px, 25vw, 180px);
+    height: clamp(130px, 25vw, 180px);
+}
+
 .background {
     display: flex;
     align-items: center;
@@ -40,26 +70,62 @@ body {
     height: clamp(1000px, 200vw, 1400px);
 }
 
+#scroll-icon {
+    width: clamp(48px, 10vw, 64px);
+    height: clamp(48px, 10vw, 64px);
+    position: absolute;
+    bottom: 16px;
+    left: calc(50% - clamp(56px, 10vw, 72px));
+}
+
 .background img {
     width: 100%;
     height: 100%;
 }
 
-.container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#main-section {
+    width: clamp(412px, 82vw, 575px);
+    height: clamp(412px, 82vw, 575px);
     transform: skew(9deg, 9deg);
-    gap: 16px;
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+}
+
+#main-section::-webkit-scrollbar {
+    display: none;
 }
 
 #resume-section {
+    width: clamp(412px, 82vw, 575px);
+    height: clamp(412px, 82vw, 575px);
+    transform: skew(9deg, 9deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     display: none;
+    gap: 16px;
 }
+
 #expertise-section {
+    width: clamp(412px, 82vw, 575px);
+    height: clamp(412px, 82vw, 575px);
+    transform: skew(9deg, 9deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     display: none;
+    gap: 16px;
+}
+
+.sub-container {
+    width: clamp(412px, 82vw, 575px);
+    height: clamp(412px, 82vw, 575px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+    gap: 16px;
 }
 
 .menu-container {
@@ -132,6 +198,14 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
+}
+
+.socials-icon-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    gap: 12px;
 }
 
 .socials-container lottie-player {
