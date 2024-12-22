@@ -1,6 +1,7 @@
 import "@lottiefiles/lottie-player";
 import {create} from '@lottiefiles/lottie-interactivity';
 
+let loadingScreen;
 let resumeButton, expertiseButton, backButtons;
 let mainSection, resumeSection, expertiseSection;
 
@@ -8,11 +9,8 @@ var currentSection = 0;
 
 function transition(from, to, flex = true) {
     const fadeOut = from.animate([
-        {
-            opacity: 1
-        }, {
-            opacity: 0
-        }
+        { opacity: 1 }, 
+        { opacity: 0 }
     ], {
         duration: 250,
         fill: "forwards",
@@ -22,12 +20,9 @@ function transition(from, to, flex = true) {
     fadeOut.addEventListener("finish", () => {
         from.style.display = 'none';
         to.style.display = flex ? 'flex' : 'block';
-        const fadeIn = to.animate([
-            {
-                opacity: 0
-            }, {
-                opacity: 1
-            }
+        to.animate([
+            { opacity: 0 }, 
+            { opacity: 1 }
         ], {
             duration: 250,
             fill: "forwards",
@@ -56,6 +51,25 @@ function gotoExpertise() {
         transition(mainSection, expertiseSection);
         currentSection = 2;
     }
+}
+
+function initializeLoadingScreen() {
+    loadingScreen = document.getElementById("loading-screen");
+    window.addEventListener("load", () => {
+        const animation = loadingScreen.animate([
+                { opacity: 1 },
+                { opacity: 0 }
+            ], {
+                duration: 250,
+                fill: "forwards",
+                easing: "ease-out"
+            }
+        );
+
+        animation.addEventListener("finish", () => {
+            loadingScreen.style.display = "none";
+        }, {once: true});
+    }, { once: true });
 }
 
 function initializeLottie() {
@@ -132,6 +146,7 @@ function initializePDF() {
 }
 
 function init() {
+    initializeLoadingScreen();
     initializeLottie();
     initializeSections()
     initializeButtons();
