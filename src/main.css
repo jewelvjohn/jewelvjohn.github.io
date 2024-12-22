@@ -141,7 +141,7 @@ th {
     font-size: clamp(14px, 2vw, 18px);
     text-align: left;
     font-family: 'Montserrat';
-    padding-bottom: 8px;
+    padding-block: 0;
     padding-inline: 8px;
 }
 
@@ -217,8 +217,8 @@ td {
 }
 
 .back-button lottie-player{
-    width: clamp(56px, 10vw, 72px);
-    height: clamp(56px, 10vw, 72px);
+    width: clamp(48px, 10vw, 72px);
+    height: clamp(48px, 10vw, 72px);
     border-radius: 16px;
     border: solid 2px #D64045;
     background-color: transparent;
@@ -264,8 +264,8 @@ td {
 }
 
 #download-button lottie-player {
-    width: clamp(56px, 10vw, 72px);
-    height: clamp(56px, 10vw, 72px);
+    width: clamp(48px, 10vw, 72px);
+    height: clamp(48px, 10vw, 72px);
     border-radius: 16px;
     border: solid 2px #D64045;
     background-color: transparent;
