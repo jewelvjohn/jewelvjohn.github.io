@@ -36,8 +36,11 @@ body {
 }
 
 .introduction {
-    display: flex;
-    padding: 18px;
+    display: grid;
+    padding-inline: 16px;
+    grid-template-areas: 
+        "header header profile"
+        "footer footer footer";
     gap: 8px;
     align-items: center;
     justify-content: center;
@@ -46,19 +49,21 @@ body {
 .introduction h2 {
     font-family: 'Montserrat';
     font-weight: 400;
-    font-size: clamp(18px, 3.4vw, 26px);
-
-}
-
-.introduction p {
-    font-family: 'Montserrat';
-    font-size: clamp(14px, 3vw, 22px);
+    font-size: clamp(16px, 3.4vw, 26px);
+    grid-area: header;
 }
 
 .introduction img {
     border-radius: 50%;
-    width: clamp(130px, 25vw, 180px);
-    height: clamp(130px, 25vw, 180px);
+    width: clamp(110px, 25vw, 180px);
+    height: clamp(110px, 25vw, 180px);
+    grid-area: profile;
+}
+
+.introduction p {
+    font-family: 'Montserrat';
+    font-size: clamp(12px, 2vw, 16px);
+    grid-area: footer;
 }
 
 .background {
@@ -117,6 +122,36 @@ body {
     gap: 16px;
 }
 
+#expertise-section .menu-container {
+    display: grid;
+    grid-template-areas:
+        "button header header header"
+        "footer footer footer footer"
+        "footer footer footer footer";
+    gap: 16px;
+}
+
+#expertise-section table {
+    width: clamp(300px, 60vw, 450px);
+    margin-top: 16px;
+    grid-area: footer;
+}
+
+th {
+    font-size: clamp(14px, 2vw, 18px);
+    text-align: left;
+    font-family: 'Montserrat';
+    padding-bottom: 8px;
+    padding-inline: 8px;
+}
+
+td {
+    font-size: clamp(12px, 2vw, 16px);
+    text-align: left;
+    font-family: 'Montserrat';
+    padding-inline: 8px;
+}
+
 .sub-container {
     width: clamp(412px, 82vw, 575px);
     height: clamp(412px, 82vw, 575px);
@@ -144,12 +179,13 @@ body {
     font-size: clamp(16px, 3vw, 24px);
     font-weight: 600;
     letter-spacing: 1px;
+    grid-area: header;
 }
 
 .menu-button button {
     font-family: "Montserrat";
-    width: clamp(200px, 40vw, 300px);
-    height: clamp(40px, 8vw, 60px);
+    width: clamp(180px, 40vw, 300px);
+    height: clamp(36px, 8vw, 60px);
     margin-bottom: 8px;
     border-radius: clamp(12px, 2vw, 16px);
     border: solid 2px #9ED8DB;
@@ -173,7 +209,11 @@ body {
 .button-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
+}
+
+.back-button {
+    grid-area: button;
 }
 
 .back-button lottie-player{
@@ -209,8 +249,8 @@ body {
 }
 
 .socials-container lottie-player {
-    width: clamp(56px, 10vw, 72px);
-    height: clamp(56px, 10vw, 72px);
+    width: clamp(48px, 10vw, 72px);
+    height: clamp(48px, 10vw, 72px);
     border-radius: 16px;
     border: solid 2px #D64045;
     background-color: transparent;
@@ -249,4 +289,10 @@ body {
 
 #pdf-canvas {
     width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+    .introduction {
+        padding-inline: 44px;
+    }
 }
