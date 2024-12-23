@@ -36,10 +36,12 @@ body {
 }
 
 #loading-screen {
-    position: fixed;
+    background: #000 url(./resources/images/loading.gif) no-repeat center center;
+    background-size: 25%;
+    background-size: 25vmin;
     width: 100%;
     height: 100vh;
-    background: #000000;
+    position: fixed;
     z-index: 100;
 }
 
@@ -48,8 +50,9 @@ body {
     padding-inline: 16px;
     grid-template-areas: 
         "header header profile"
+        "brand brand brand"
         "footer footer footer";
-    gap: 8px;
+    gap: 12px;
     align-items: center;
     justify-content: center;
 }
@@ -72,6 +75,25 @@ body {
     font-family: 'Montserrat';
     font-size: clamp(12px, 2vw, 16px);
     grid-area: footer;
+}
+
+.brand {
+    display: grid;
+    grid-template-areas: 
+        "pic txt txt";
+    grid-area: brand;
+    gap: 12px;
+}
+
+.brand img {
+    border-radius: 0;
+    width: clamp(48px, 10vw, 64px);
+    height: clamp(48px, 10vw, 64px);
+    grid-area: pic;
+}
+
+.brand p {
+    grid-area: txt;
 }
 
 .background {
